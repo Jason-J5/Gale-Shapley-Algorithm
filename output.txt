@@ -1,0 +1,139 @@
+Participants:
+['Abe', 'Bob', 'Col', 'Dan', 'Ed', 'Fred', 'Gav', 'Hal', 'Ian', 'Jon']
+['Abi', 'Bea', 'Cath', 'Dee', 'Eve', 'Fay', 'Gay', 'Hope', 'Ivy', 'Jan']
+
+Preferences:
+Abe : ['Hope', 'Abi', 'Fay', 'Gay', 'Bea', 'Cath', 'Dee', 'Jan', 'Eve', 'Ivy']
+Bob : ['Hope', 'Eve', 'Cath', 'Ivy', 'Jan', 'Fay', 'Bea', 'Abi', 'Dee', 'Gay']
+Col : ['Hope', 'Eve', 'Abi', 'Jan', 'Dee', 'Cath', 'Bea', 'Ivy', 'Fay', 'Gay']
+Dan : ['Ivy', 'Abi', 'Dee', 'Cath', 'Gay', 'Bea', 'Eve', 'Jan', 'Fay', 'Hope']
+Ed : ['Cath', 'Fay', 'Bea', 'Jan', 'Ivy', 'Eve', 'Dee', 'Abi', 'Gay', 'Hope']
+Fred : ['Cath', 'Dee', 'Jan', 'Abi', 'Gay', 'Fay', 'Ivy', 'Hope', 'Eve', 'Bea']
+Gav : ['Hope', 'Eve', 'Bea', 'Fay', 'Gay', 'Dee', 'Ivy', 'Jan', 'Abi', 'Cath']
+Hal : ['Abi', 'Bea', 'Hope', 'Dee', 'Cath', 'Jan', 'Fay', 'Gay', 'Ivy', 'Eve']
+Ian : ['Dee', 'Jan', 'Abi', 'Gay', 'Bea', 'Cath', 'Fay', 'Hope', 'Eve', 'Ivy']
+Jon : ['Fay', 'Abi', 'Jan', 'Hope', 'Gay', 'Bea', 'Dee', 'Eve', 'Ivy', 'Cath']
+Abi : ['Ian', 'Gav', 'Ed', 'Jon', 'Bob', 'Col', 'Dan', 'Abe', 'Fred', 'Hal']
+Bea : ['Ian', 'Fred', 'Col', 'Bob', 'Jon', 'Gav', 'Ed', 'Dan', 'Abe', 'Hal']
+Cath : ['Ian', 'Fred', 'Hal', 'Dan', 'Bob', 'Col', 'Abe', 'Gav', 'Jon', 'Ed']
+Dee : ['Fred', 'Gav', 'Ian', 'Dan', 'Col', 'Bob', 'Hal', 'Abe', 'Ed', 'Jon']
+Eve : ['Ian', 'Col', 'Hal', 'Ed', 'Fred', 'Dan', 'Abe', 'Jon', 'Bob', 'Gav']
+Fay : ['Bob', 'Hal', 'Col', 'Fred', 'Jon', 'Abe', 'Ian', 'Gav', 'Ed', 'Dan']
+Gay : ['Abe', 'Dan', 'Jon', 'Ian', 'Hal', 'Bob', 'Gav', 'Ed', 'Col', 'Fred']
+Hope : ['Ian', 'Jon', 'Hal', 'Abe', 'Col', 'Dan', 'Bob', 'Ed', 'Gav', 'Fred']
+Ivy : ['Jon', 'Hal', 'Fred', 'Bob', 'Dan', 'Col', 'Ed', 'Ian', 'Gav', 'Abe']
+Jan : ['Col', 'Abe', 'Gav', 'Jon', 'Bob', 'Dan', 'Fred', 'Ed', 'Ian', 'Hal']
+
+
+Abe proposes to Hope
+Abe and Hope are engaged
+
+Bob proposes to Hope
+Hope prefers Abe over Bob
+Hope rejects Bob
+
+Bob proposes to Eve
+Bob and Eve are engaged
+
+Col proposes to Hope
+Hope prefers Abe over Col
+Hope rejects Col
+
+Col proposes to Eve
+Eve prefers Col over Bob
+Eve dumps Bob
+Col and Eve are engaged
+
+Bob proposes to Cath
+Bob and Cath are engaged
+
+Dan proposes to Ivy
+Dan and Ivy are engaged
+
+Ed proposes to Cath
+Cath prefers Bob over Ed
+Cath rejects Ed
+
+Ed proposes to Fay
+Ed and Fay are engaged
+
+Fred proposes to Cath
+Cath prefers Fred over Bob
+Cath dumps Bob
+Fred and Cath are engaged
+
+Bob proposes to Ivy
+Ivy prefers Bob over Dan
+Ivy dumps Dan
+Bob and Ivy are engaged
+
+Dan proposes to Abi
+Dan and Abi are engaged
+
+Gav proposes to Hope
+Hope prefers Abe over Gav
+Hope rejects Gav
+
+Gav proposes to Eve
+Eve prefers Col over Gav
+Eve rejects Gav
+
+Gav proposes to Bea
+Gav and Bea are engaged
+
+Hal proposes to Abi
+Abi prefers Dan over Hal
+Abi rejects Hal
+
+Hal proposes to Bea
+Bea prefers Gav over Hal
+Bea rejects Hal
+
+Hal proposes to Hope
+Hope prefers Hal over Abe
+Hope dumps Abe
+Hal and Hope are engaged
+
+Abe proposes to Abi
+Abi prefers Dan over Abe
+Abi rejects Abe
+
+Abe proposes to Fay
+Fay prefers Abe over Ed
+Fay dumps Ed
+Abe and Fay are engaged
+
+Ed proposes to Bea
+Bea prefers Gav over Ed
+Bea rejects Ed
+
+Ed proposes to Jan
+Ed and Jan are engaged
+
+Ian proposes to Dee
+Ian and Dee are engaged
+
+Jon proposes to Fay
+Fay prefers Jon over Abe
+Fay dumps Abe
+Jon and Fay are engaged
+
+Abe proposes to Gay
+Abe and Gay are engaged
+
+Pairings:
+Dan : Abi
+Gav : Bea
+Fred : Cath
+Ian : Dee
+Col : Eve
+Jon : Fay
+Abe : Gay
+Hal : Hope
+Bob : Ivy
+Ed : Jan
+
+Elapsed wall clock time: 0.119507
+Elapsed CPU time:        0.01147
+Another trial? (y)es, (n)o?
+n
