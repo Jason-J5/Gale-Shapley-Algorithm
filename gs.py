@@ -4,23 +4,70 @@ import time
 import random
 from timeit import default_timer as timer
 
+#set up global vars 
 wallTimeStart = time.time()
 
 rank = dict()
 
+people = []
+#take first half of people list for men
+men = []
+#take second half of people list women 
+women = []
+
+#list of free men in a queue
+freeMen = []
+#list of free women in a queue
+freeWomen = []
+
+"""Maintain two arrays wife[m], and husband[w].
+– set entry to 0 if unmatched
+– if m matched to w then wife[m]=w and husband[w]=m"""
+husband = []
+
+
+"""
+Men proposing.
+    For each man, maintain a list of women, ordered by preference.
+    Maintain an array count[m] that counts the number of proposals
+    made by man m.
+"""
+#list of women ordered by preferance is in the dict accessed via rank[men[0]] where men[0] is the mans name or rank[x] where x is the mans name
+#print(rank['Victor'])
+
+#asked is a list of keeps count of the number of proposals made by man m  
+#ex: asked[0] is the number of women that man[0] has asked 
+#ex: if man[0] has asked 3 people then asked[0] == 3 
+asked = []
+
+"""
+#   man1 asks choice 1
+man1 = men[0]
+indexOfPick = asked[men.index(man1)]
+print(rank[man1][indexOfPick])
+"""
+
+def assignGlobals():
+    global people, men, women, freeMen, freeWomen, husband, asked 
+    people = list(rank.keys())
+    #take first half of people list for men
+    men = people[:len(people)//2]
+    #take second half of people list women 
+    women = people[len(people)//2:]
+    #list of free men in a queue
+    freeMen = copy.deepcopy(men)
+    #list of free women in a queue
+    freeWomen =  copy.deepcopy(women)
+    husband = [0] * len(freeMen) 
+    asked = [0] * len(men)
+
 #read prefs from file 
 def inFile(f):
     name = ''
-    with open("prefs.txt") as file:
+    with open(f) as file:
         for line in file:
             name = line.split(':')
             rank[name[0]] = (name[1].strip().split(" "))
-
-people = list(rank.keys())
-#take first half of people list for men
-men = people[:len(people)//2]
-#take second half of people list women 
-women = people[len(people)//2:]
 
 
 def FYshuffle(list):
@@ -60,43 +107,6 @@ def setup(f):
     for person in people:
         print(person,":", rank[person], file=f)
         print(person,":", rank[person])
-
-
-
-
-
-#list of free men in a queue
-freeMen = copy.deepcopy(men)
-#list of free women in a queue
-freeWomen =  copy.deepcopy(women)
-
-"""Maintain two arrays wife[m], and husband[w].
-– set entry to 0 if unmatched
-– if m matched to w then wife[m]=w and husband[w]=m"""
-husband = [0] * len(freeMen) 
-
-
-"""
-Men proposing.
-    For each man, maintain a list of women, ordered by preference.
-    Maintain an array count[m] that counts the number of proposals
-    made by man m.
-"""
-#list of women ordered by preferance is in the dict accessed via rank[men[0]] where men[0] is the mans name or rank[x] where x is the mans name
-#print(rank['Victor'])
-
-#asked is a list of keeps count of the number of proposals made by man m  
-#ex: asked[0] is the number of women that man[0] has asked 
-#ex: if man[0] has asked 3 people then asked[0] == 3 
-asked = [0] * len(men)  
-
-"""
-#   man1 asks choice 1
-man1 = men[0]
-indexOfPick = asked[men.index(man1)]
-print(rank[man1][indexOfPick])
-"""
-
 
 def prefers(w, suiter, partner, f):
     """
@@ -189,9 +199,9 @@ def gs(f):
             print(w, "rejects", m)
 
 
-
 def main(argv):
-    outputfile = ''
+    outputfile = "output.txt"
+    inputFile = "prefs.txt"
     try:
         opts, args = getopt.getopt(argv,"hi:o:",["ifile=","ofile="])
     except getopt.GetoptError:
@@ -214,9 +224,13 @@ def main(argv):
         else:
             sys.exit()
 
-
     run =  True
-    inFile(inputFile)
+    if inputFile == None:
+        print("no file")
+    else:
+        inFile(inputFile)
+        assignGlobals()
+        
     with open(outputFile, "w") as f:  
         while run:
             #Print the setup ie. people and prefs
@@ -261,12 +275,6 @@ def main(argv):
             if repeat == 'n' or repeat == "no":
                 f.close()
                 run = False
-
-
-
-
-
-
 
 
 if __name__ == "__main__":
