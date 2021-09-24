@@ -9,11 +9,12 @@ wallTimeStart = time.time()
 rank = dict()
 
 #read prefs from file 
-name = ''
-with open("prefs.txt") as file:
- for line in file:
-    name = line.split(':')
-    rank[name[0]] = (name[1].strip().split(" "))
+def inFile(f):
+    name = ''
+    with open("prefs.txt") as file:
+        for line in file:
+            name = line.split(':')
+            rank[name[0]] = (name[1].strip().split(" "))
 
 people = list(rank.keys())
 #take first half of people list for men
@@ -31,6 +32,10 @@ def FYshuffle(list):
 
 
 def setup(f):
+    """
+
+    """
+
     """Shuffle all the preferances"""
     for person in people:
         FYshuffle(rank[person])
@@ -201,14 +206,18 @@ def main(argv):
             
             sys.exit()
         
+        elif opt == '-i':
+            inputFile = arg
+        
         elif opt in ("-o", "--ofile"):
-            outputfile = arg
+            outputFile = arg
         else:
             sys.exit()
 
 
     run =  True
-    with open(outputfile, "w") as f:  
+    inFile(inputFile)
+    with open(outputFile, "w") as f:  
         while run:
             #Print the setup ie. people and prefs
             setup(f)
