@@ -8,44 +8,26 @@ from timeit import default_timer as timer
 wallTimeStart = time.time()
 
 rank = dict()
-
 people = []
-#take first half of people list for men
 men = []
-#take second half of people list women 
 women = []
-
-#list of free men in a queue
 freeMen = []
-#list of free women in a queue
 freeWomen = []
-
-"""Maintain two arrays wife[m], and husband[w].
-– set entry to 0 if unmatched
-– if m matched to w then wife[m]=w and husband[w]=m"""
 husband = []
-
-
-"""
-Men proposing.
-    For each man, maintain a list of women, ordered by preference.
-    Maintain an array count[m] that counts the number of proposals
-    made by man m.
-"""
-#list of women ordered by preferance is in the dict accessed via rank[men[0]] where men[0] is the mans name or rank[x] where x is the mans name
-#print(rank['Victor'])
-
-#asked is a list of keeps count of the number of proposals made by man m  
-#ex: asked[0] is the number of women that man[0] has asked 
-#ex: if man[0] has asked 3 people then asked[0] == 3 
 asked = []
 
-"""
-#   man1 asks choice 1
-man1 = men[0]
-indexOfPick = asked[men.index(man1)]
-print(rank[man1][indexOfPick])
-"""
+def createIntPrefs(p):
+    #males first half of number 
+    half = int(p/2)
+    for i in range(p):
+        if i < half:
+            rank[i] = [j for j in range(half, half*2)]
+        else:
+            rank[i] = [j for j in range(0, half)]
+
+#createIntPrefs(10)
+#time.sleep(20)
+
 
 def assignGlobals():
     global people, men, women, freeMen, freeWomen, husband, asked 
@@ -58,8 +40,33 @@ def assignGlobals():
     freeMen = copy.deepcopy(men)
     #list of free women in a queue
     freeWomen =  copy.deepcopy(women)
+
+    """Maintain two arrays wife[m], and husband[w].
+    – set entry to 0 if unmatched
+    – if m matched to w then wife[m]=w and husband[w]=m"""
     husband = [0] * len(freeMen) 
+
+    """
+    Men proposing.
+        For each man, maintain a list of women, ordered by preference.
+        Maintain an array count[m] that counts the number of proposals
+        made by man m.
+    """
+    #list of women ordered by preferance is in the dict accessed via rank[men[0]] where men[0] is the mans name or rank[x] where x is the mans name
+    #print(rank['Victor'])
+
+    #asked is a list of keeps count of the number of proposals made by man m  
+    #ex: asked[0] is the number of women that man[0] has asked 
+    #ex: if man[0] has asked 3 people then asked[0] == 3 
+
     asked = [0] * len(men)
+
+    """
+    #   man1 asks choice 1
+    man1 = men[0]
+    indexOfPick = asked[men.index(man1)]
+    print(rank[man1][indexOfPick])
+    """
 
 #read prefs from file 
 def inFile(f):
@@ -200,12 +207,13 @@ def gs(f):
 
 
 def main(argv):
-    outputfile = "output.txt"
-    inputFile = "prefs.txt"
+    outputFile = "output.txt"
+    inputFile = None
+    numPeople = 0
     try:
-        opts, args = getopt.getopt(argv,"hi:o:",["ifile=","ofile="])
+        opts, args = getopt.getopt(argv,"hi:p:",["ifile=","ofile=","numPeople="])
     except getopt.GetoptError:
-      sys.exit(2)
+        sys.exit(2)
     for opt, arg in opts:
         if opt == '-h':
             print("Usage:")
@@ -219,17 +227,25 @@ def main(argv):
         elif opt == '-i':
             inputFile = arg
         
-        elif opt in ("-o", "--ofile"):
+        elif opt == "-o":
             outputFile = arg
+        
+        elif opt == "-p":
+            numPeople = arg
         else:
             sys.exit()
 
     run =  True
     if inputFile == None:
-        print("no file")
+        if int(numPeople) % 2 != 0:
+            print("-p only accepts even numbers")
+            sys.exit()
+
+        createIntPrefs(int(numPeople))  
     else:
         inFile(inputFile)
-        assignGlobals()
+    
+    assignGlobals()
         
     with open(outputFile, "w") as f:  
         while run:
