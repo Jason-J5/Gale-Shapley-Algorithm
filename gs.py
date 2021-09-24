@@ -211,7 +211,7 @@ def main(argv):
     inputFile = None
     numPeople = 0
     try:
-        opts, args = getopt.getopt(argv,"hi:p:",["ifile=","ofile=","numPeople="])
+        opts, args = getopt.getopt(argv,"hi:p:")
     except getopt.GetoptError:
         sys.exit(2)
     for opt, arg in opts:
