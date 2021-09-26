@@ -17,6 +17,11 @@ husband = []
 asked = []
 
 def createIntPrefs(p):
+    """[Adds p people to the dict rank and assigns each of them preferances]
+
+    Args:
+        p ([int]): [P represents the number of people you want to create]
+    """
     #males first half of number 
     half = int(p/2)
     for i in range(p):
@@ -30,6 +35,9 @@ def createIntPrefs(p):
 
 
 def assignGlobals():
+    """[Assigns values to the global variables, needed to be able to use different files for input and output]
+    """    
+
     global people, men, women, freeMen, freeWomen, husband, asked 
     people = list(rank.keys())
     #take first half of people list for men
@@ -70,6 +78,11 @@ def assignGlobals():
 
 #read prefs from file 
 def inFile(f):
+    """[reads info from a given file into the program to create people and preferances]
+
+    Args:
+        f ([file]): [f is the input file]
+    """    
     name = ''
     with open(f) as file:
         for line in file:
@@ -78,6 +91,14 @@ def inFile(f):
 
 
 def FYshuffle(list):
+    """[Implementation of the fisher yates shuffle algo]
+
+    Args:
+        list ([list]): [list of things to shuffle]
+
+    Returns:
+        [list]: [shuffled version of the original list]
+    """    
     for i in range(len(list)):
         a = random.randint(0, len(list) - 1)
         b = random.randint(0, len(list) - 1)
@@ -86,9 +107,11 @@ def FYshuffle(list):
 
 
 def setup(f):
-    """
+    """[Shuffles the preferances and writes the participants and their preferances to the file]
 
-    """
+    Args:
+        f ([file]): [needed to print output to the file]
+    """ 
 
     """Shuffle all the preferances"""
     for person in people:
@@ -116,7 +139,14 @@ def setup(f):
         print(person,":", rank[person])
 
 def prefers(w, suiter, partner, f):
-    """
+    """[returns who woman w prefers, her suiter or her partner]
+
+    Args:
+        w ([str]): [womans name]
+        suiter ([str]): [suiters name]
+        partner ([str]): [partners name]
+        f ([file]): [output file to write to it]
+
     Returns:
         [bool]: [true when the woman prefers her suiter to her current partner 
         and false if she prefers her current partner]
@@ -144,24 +174,11 @@ prefers("Bertha", "Victor", husband[women.index("Bertha")])"""
 
 
 def gs(f):
-    """
-    Initialize each person to be free.
-    while (some man is free and hasn't proposed to every woman) {
-        
-        Choose such a man m
-        w = 1st woman on m's list to whom m has not yet proposed
-        
-        if (w is free)
-            assign m and w to be engaged
+    """[Implements the gale shapley algorithm following the psudocode from the slides]
 
-        else if (w prefers m to her fiancé m')
-            assign m and w to be engaged, and m' to be free
-
-        else
-            w rejects m
-    }
-
-    """
+    Args:
+        f ([file]): [needed for output file]
+    """    
     #starting all people are free ie freeMen and freeWomen have all males and females
     while len(freeMen) > 0 :
         #Choose such a man m
