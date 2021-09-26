@@ -123,7 +123,7 @@ def setup(f):
         print(person,":", rank[person])
 
 
-def prefers(w, suiter, partner, f):
+def prefers(w, suiter, partner, f=None):
     """[returns who woman w prefers, her suiter or her partner]
 
     Args:
@@ -136,111 +136,99 @@ def prefers(w, suiter, partner, f):
         [bool]: [true when the woman prefers her suiter to her current partner 
         and false if she prefers her current partner]
     """
-    wlist = list(rank[w])
-    #print(wlist)
-    if wlist.index(suiter) < wlist.index(partner):
-        print(w, "prefers", suiter, "over", partner, file=f)
-        print(w, "prefers", suiter, "over", partner)
-        print(w, "dumps", partner, file=f)
-        print(w, "dumps", partner)
-        return True
+    if f == None:
+        wlist = list(rank[w])
+        #print(wlist)
+        if wlist.index(suiter) < wlist.index(partner):
+            return True
+        return False
+    
+    else:
+        wlist = list(rank[w])
+        #print(wlist)
+        if wlist.index(suiter) < wlist.index(partner):
+            print(w, "prefers", suiter, "over", partner, file=f)
+            print(w, "prefers", suiter, "over", partner)
+            print(w, "dumps", partner, file=f)
+            print(w, "dumps", partner)
+            return True
 
-    print(w, "prefers", partner, "over", suiter, file=f)
-    print(w, "prefers", partner, "over", suiter)
-    return False
-
-#prefers overload
-def prefers(w, suiter, partner):
-    """[returns who woman w prefers, her suiter or her partner]
-
-    Args:
-        w ([str]): [womans name]
-        suiter ([str]): [suiters name]
-        partner ([str]): [partners name]
-
-    Returns:
-        [bool]: [true when the woman prefers her suiter to her current partner 
-        and false if she prefers her current partner]
-    """
-    wlist = list(rank[w])
-    #print(wlist)
-    if wlist.index(suiter) < wlist.index(partner):
-        return True
-    return False
+        print(w, "prefers", partner, "over", suiter, file=f)
+        print(w, "prefers", partner, "over", suiter)
+        return False
 
 
-def gs(f):
+
+def gs(f=None):
     """[Implements the gale shapley algorithm following the psudocode from the slides]
 
     Args:
         f ([file]): [needed for output file]
-    """    
-    #starting all people are free ie freeMen and freeWomen have all males and females
-    while len(freeMen) > 0 :
-        #Choose such a man m
-        m = freeMen[0]
+    """
+    if f == None:
+        while len(freeMen) > 0 :
+            #Choose such a man m
+            m = freeMen[0]
+            #w = 1st woman on m's list to whom m has not yet proposed
+            w = rank[m][asked[men.index(m)]]
+            #increment asked for m
+            asked[men.index(m)] += 1
+            #if (w is free)
+                #assign m and w to be engaged
+            if freeWomen.__contains__(w):            
+                husband[women.index(w)] = m
+                freeWomen.pop(freeWomen.index(w))
+                freeMen.pop(freeMen.index(m))
+                #print(husband)
+            elif prefers(w, m, husband[women.index(w)]):
+                #print(w ,"prefers", m)
+                freeMen.insert(0, husband[women.index(w)])
+                husband[women.index(w)] = m
+                freeMen.pop(freeMen.index(m))
 
-        #print space for new man
-        print(file=f)
-        print()
+    else:    
+        #starting all people are free ie freeMen and freeWomen have all males and females
+        while len(freeMen) > 0 :
+            #Choose such a man m
+            m = freeMen[0]
 
-        #w = 1st woman on m's list to whom m has not yet proposed
-        w = rank[m][asked[men.index(m)]]
-        
-        #increment asked for m
-        asked[men.index(m)] += 1
+            #print space for new man
+            print(file=f)
+            print()
 
-        print(m, "proposes to", w, file=f)
-        print(m, "proposes to", w)
-        
-        #if (w is free)
-            #assign m and w to be engaged
-        if freeWomen.__contains__(w):
-            print(m ,"and", w, "are engaged", file=f)
-            print(m ,"and", w, "are engaged")
+            #w = 1st woman on m's list to whom m has not yet proposed
+            w = rank[m][asked[men.index(m)]]
             
-            husband[women.index(w)] = m
+            #increment asked for m
+            asked[men.index(m)] += 1
 
-            freeWomen.pop(freeWomen.index(w))
-            freeMen.pop(freeMen.index(m))
+            print(m, "proposes to", w, file=f)
+            print(m, "proposes to", w)
+            
+            #if (w is free)
+                #assign m and w to be engaged
+            if freeWomen.__contains__(w):
+                print(m ,"and", w, "are engaged", file=f)
+                print(m ,"and", w, "are engaged")
+                
+                husband[women.index(w)] = m
 
-            #print(husband)
+                freeWomen.pop(freeWomen.index(w))
+                freeMen.pop(freeMen.index(m))
 
-        elif prefers(w, m, husband[women.index(w)], f):
-            #print(w ,"prefers", m)
-            freeMen.insert(0, husband[women.index(w)])
-            husband[women.index(w)] = m
-            print(m, "and", w, "are engaged", file=f)
-            print(m, "and", w, "are engaged")
-            freeMen.pop(freeMen.index(m))
-        
-        else:
-            print(w, "rejects", m, file=f)
-            print(w, "rejects", m)
+                #print(husband)
 
-#gs overload
-def gs():
-    """[Implements the gale shapley algorithm following the psudocode from the slides]"""
-    #starting all people are free ie freeMen and freeWomen have all males and females
-    while len(freeMen) > 0 :
-        #Choose such a man m
-        m = freeMen[0]
-        #w = 1st woman on m's list to whom m has not yet proposed
-        w = rank[m][asked[men.index(m)]]
-        #increment asked for m
-        asked[men.index(m)] += 1
-        #if (w is free)
-            #assign m and w to be engaged
-        if freeWomen.__contains__(w):            
-            husband[women.index(w)] = m
-            freeWomen.pop(freeWomen.index(w))
-            freeMen.pop(freeMen.index(m))
-            #print(husband)
-        elif prefers(w, m, husband[women.index(w)]):
-            #print(w ,"prefers", m)
-            freeMen.insert(0, husband[women.index(w)])
-            husband[women.index(w)] = m
-            freeMen.pop(freeMen.index(m))
+            elif prefers(w, m, husband[women.index(w)], f):
+                #print(w ,"prefers", m)
+                freeMen.insert(0, husband[women.index(w)])
+                husband[women.index(w)] = m
+                print(m, "and", w, "are engaged", file=f)
+                print(m, "and", w, "are engaged")
+                freeMen.pop(freeMen.index(m))
+            
+            else:
+                print(w, "rejects", m, file=f)
+                print(w, "rejects", m)
         
 
 def main(argv):
