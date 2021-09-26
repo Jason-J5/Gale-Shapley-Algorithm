@@ -55,3 +55,10 @@ python3 gs1.py -h
 -p <x> or --people <x> (x must be even, where x is the number of people to be created)
 -d enables debug mode. Text will be printed to the terminal and to a file called debug.txt
 ```
+
+[run-gs1.py](https://github.com/PurpleVS/CSC-321-/blob/main/run-gs1.py):
+A python script that calls [gs1.py](https://github.com/PurpleVS/CSC-321-/blob/main/gs1.py) with the values [1000, 1500, 2000, 2500,3000, 3500, 4000, 4500, 5000, 5500, 6000]. The script writes to file data.txt, appending the outputs of consecutive runs. The script ends with a call to the gnuplot program to perform the fit and plot the graph.
+
+```
+python3 run-gs1.py
+```
