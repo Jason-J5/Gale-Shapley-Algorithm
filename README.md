@@ -23,6 +23,8 @@ This project is my implementation of the Gale–Shapley algorithm
 ```
 python3 gs.py -h 
 
+-o <path to output file> (if not specified, output.txt will be the default path)
+
 -i <path to input file> (if not specified, the program will create a list of integers representing people and preferances)
 
 -p <x> or --people <x> (x must be even, where x is the number of people to be created)

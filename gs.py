@@ -211,12 +211,13 @@ def main(argv):
     inputFile = None
     numPeople = 0
     try:
-        opts, args = getopt.getopt(argv,"h:p:")
+        opts, args = getopt.getopt(argv,"hi:p:o:")
     except getopt.GetoptError:
         sys.exit(2)
     for opt, arg in opts:
         if opt == '-h':
             print("Usage:")
+            print("-o <path to output file> (if not specified, output.txt will be the default path)")
             print("-i <path to input file> (if not specified it the program will create a list of integers representing people and preferances)")
             print("-p <x> or --people <x> (x must be even, where x is the number of people to be created)")
             print("-h help")
@@ -225,6 +226,9 @@ def main(argv):
         
         elif opt == '-i':
             inputFile = arg
+        
+        elif opt == '-o':
+            outputFile = arg
         
         elif opt == "-p":
             numPeople = arg
