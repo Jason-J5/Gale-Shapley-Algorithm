@@ -145,7 +145,7 @@ prefers("Bertha", "Victor", husband[women.index("Bertha")])"""
 
 def gs(f):
     """
-  Initialize each person to be free.
+    Initialize each person to be free.
     while (some man is free and hasn't proposed to every woman) {
         
         Choose such a man m
@@ -211,13 +211,12 @@ def main(argv):
     inputFile = None
     numPeople = 0
     try:
-        opts, args = getopt.getopt(argv,"hi:p:")
+        opts, args = getopt.getopt(argv,"h:p:")
     except getopt.GetoptError:
         sys.exit(2)
     for opt, arg in opts:
         if opt == '-h':
             print("Usage:")
-            print("-o <path to output file>")
             print("-i <path to input file> (if not specified it the program will create a list of integers representing people and preferances)")
             print("-p <x> or --people <x> (x must be even, where x is the number of people to be created)")
             print("-h help")
@@ -226,9 +225,6 @@ def main(argv):
         
         elif opt == '-i':
             inputFile = arg
-        
-        elif opt == "-o":
-            outputFile = arg
         
         elif opt == "-p":
             numPeople = arg
