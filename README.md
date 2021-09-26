@@ -16,9 +16,13 @@ This project is my implementation of the Gale–Shapley algorithm
 
 
 # Usage 
- [gs.py](https://github.com/PurpleVS/CSC-321-/blob/main/gs.py) :
+[gsDemo.py](https://github.com/PurpleVS/CSC-321-/blob/main/gsDemo.py): is a interactive termianl application which requires no arguments. It is a demo implementation of the Gale-Shapley algorithm written in python. The program runs for 10 suitors and 10 girls supplied in [prefs.txt](https://github.com/PurpleVS/CSC-321-/blob/main/prefs.txt). The output of the program is the particpants their preferances and the stable matchings along with the time taken to execute the algorithm.
+    
 
- gs.py is a command line program. This means you launch it either from a Windows command prompt or Linux console, or create shortcuts to predefined command lines using a Linux Bash script or Windows batch/cmd file.
+    python3 gsDemo.py
+
+
+[gs.py](https://github.com/PurpleVS/CSC-321-/blob/main/gs.py): is a command line program. It can take parameters through the command line and preform tasks based on the arguments supplied. The program can accept either a file containing a arbitray amount of people (so long as it is a even number), or it will accept a number argument in which the number represents the number of people(so long as that number is even). These valuse can be suppplied to the program via the command line. The output of the program is the particpants their preferances and the stable matchings along with the time taken to execute the algorithm.
 
 ```
 python3 gs.py -h 

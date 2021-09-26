@@ -3,35 +3,7 @@ import time
 import random
 from timeit import default_timer as timer
 
-
-"""
-The file must have a even number of lines
-The first half must have all the males names and their preferances
-The second half must have all the females names and their preferances
-The file should look as follows:
-
-Abe:Abi Eve Cath Ivy Jan Dee Fay Bea Hope Gay 
-Abi:Bob Fred Jon Gav Ian Abe Dan Ed Col Hal 
-
-"""
-
-
-"""
-Hard coded values
-rank = dict() 
-rank ['Victor'] = ('Bertha', 'Amy', 'Diane', 'Erika', 'Clare') 
-rank ['Wyatt'] = ('Erika', 'Bertha', 'Amy', 'Clare', 'Diane') 
-rank ['Xavier'] = ('Bertha', 'Erika', 'Clare', 'Diane', 'Amy') 
-rank ['Yancey'] = ('Amy', 'Diane', 'Clare', 'Bertha', 'Erika') 
-rank ['Zeus'] = ('Bertha', 'Diane', 'Amy', 'Erika', 'Clare') 
-rank ['Amy'] = ('Zeus', 'Victor', 'Wyatt', 'Yancey', 'Xavier') 
-rank ['Bertha'] = ('Xavier', 'Wyatt', 'Yancey', 'Victor', 'Zeus') 
-rank ['Clare'] = ('Wyatt', 'Xavier', 'Yancey', 'Zeus', 'Victor') 
-rank ['Diane'] = ('Victor', 'Zeus', 'Yancey', 'Xavier', 'Wyatt') 
-rank ['Erika'] = ('Yancey', 'Wyatt', 'Zeus', 'Xavier', 'Victor') """
-
 wallTimeStart = time.time()
-
 
 rank = dict()
 

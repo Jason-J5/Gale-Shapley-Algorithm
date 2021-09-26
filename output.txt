@@ -1,53 +1,90 @@
 Participants:
-['Victor', 'Wyatt', 'Xavier', 'Yancey', 'Zeus']
-['Amy', 'Bertha', 'Clare', 'Diane', 'Erika']
+['Abe', 'Bob', 'Col', 'Dan', 'Ed', 'Fred', 'Gav', 'Hal', 'Ian', 'Jon']
+['Abi', 'Bea', 'Cath', 'Dee', 'Eve', 'Fay', 'Gay', 'Hope', 'Ivy', 'Jan']
 
 Preferences:
-Victor : ['Clare', 'Amy', 'Diane', 'Bertha', 'Erika']
-Wyatt : ['Clare', 'Erika', 'Diane', 'Bertha', 'Amy']
-Xavier : ['Bertha', 'Amy', 'Clare', 'Diane', 'Erika']
-Yancey : ['Amy', 'Diane', 'Bertha', 'Clare', 'Erika']
-Zeus : ['Erika', 'Amy', 'Diane', 'Bertha', 'Clare']
-Amy : ['Yancey', 'Xavier', 'Wyatt', 'Victor', 'Zeus']
-Bertha : ['Yancey', 'Victor', 'Xavier', 'Wyatt', 'Zeus']
-Clare : ['Yancey', 'Zeus', 'Xavier', 'Wyatt', 'Victor']
-Diane : ['Yancey', 'Zeus', 'Wyatt', 'Xavier', 'Victor']
-Erika : ['Yancey', 'Xavier', 'Victor', 'Zeus', 'Wyatt']
+Abe : ['Ivy', 'Eve', 'Gay', 'Hope', 'Fay', 'Dee', 'Cath', 'Abi', 'Bea', 'Jan']
+Bob : ['Gay', 'Jan', 'Cath', 'Eve', 'Bea', 'Fay', 'Hope', 'Dee', 'Ivy', 'Abi']
+Col : ['Fay', 'Eve', 'Jan', 'Hope', 'Abi', 'Ivy', 'Dee', 'Bea', 'Cath', 'Gay']
+Dan : ['Abi', 'Hope', 'Cath', 'Gay', 'Jan', 'Ivy', 'Fay', 'Bea', 'Dee', 'Eve']
+Ed : ['Jan', 'Bea', 'Ivy', 'Dee', 'Hope', 'Abi', 'Eve', 'Cath', 'Fay', 'Gay']
+Fred : ['Hope', 'Dee', 'Jan', 'Fay', 'Eve', 'Abi', 'Cath', 'Gay', 'Bea', 'Ivy']
+Gav : ['Ivy', 'Eve', 'Jan', 'Fay', 'Bea', 'Dee', 'Cath', 'Hope', 'Gay', 'Abi']
+Hal : ['Eve', 'Hope', 'Cath', 'Fay', 'Dee', 'Ivy', 'Gay', 'Jan', 'Abi', 'Bea']
+Ian : ['Abi', 'Bea', 'Dee', 'Cath', 'Ivy', 'Gay', 'Hope', 'Jan', 'Fay', 'Eve']
+Jon : ['Cath', 'Jan', 'Gay', 'Ivy', 'Dee', 'Fay', 'Abi', 'Eve', 'Hope', 'Bea']
+Abi : ['Bob', 'Fred', 'Hal', 'Gav', 'Jon', 'Abe', 'Dan', 'Ian', 'Ed', 'Col']
+Bea : ['Jon', 'Fred', 'Dan', 'Ian', 'Gav', 'Abe', 'Col', 'Hal', 'Ed', 'Bob']
+Cath : ['Fred', 'Abe', 'Bob', 'Hal', 'Ian', 'Col', 'Gav', 'Jon', 'Dan', 'Ed']
+Dee : ['Fred', 'Jon', 'Hal', 'Bob', 'Ian', 'Gav', 'Ed', 'Dan', 'Abe', 'Col']
+Eve : ['Ed', 'Bob', 'Fred', 'Gav', 'Abe', 'Ian', 'Jon', 'Dan', 'Hal', 'Col']
+Fay : ['Col', 'Ed', 'Fred', 'Dan', 'Bob', 'Jon', 'Gav', 'Ian', 'Hal', 'Abe']
+Gay : ['Jon', 'Abe', 'Hal', 'Col', 'Ed', 'Bob', 'Dan', 'Gav', 'Fred', 'Ian']
+Hope : ['Gav', 'Jon', 'Bob', 'Abe', 'Dan', 'Hal', 'Col', 'Fred', 'Ian', 'Ed']
+Ivy : ['Ed', 'Abe', 'Hal', 'Dan', 'Fred', 'Ian', 'Jon', 'Col', 'Gav', 'Bob']
+Jan : ['Ed', 'Hal', 'Abe', 'Dan', 'Col', 'Fred', 'Ian', 'Bob', 'Gav', 'Jon']
 
 
-Victor proposes to Clare
-Victor and Clare are engaged
+Abe proposes to Ivy
+Abe and Ivy are engaged
 
-Wyatt proposes to Clare
-Clare prefers Wyatt over Victor
-Clare dumps Victor
-Wyatt and Clare are engaged
+Bob proposes to Gay
+Bob and Gay are engaged
 
-Victor proposes to Amy
-Victor and Amy are engaged
+Col proposes to Fay
+Col and Fay are engaged
 
-Xavier proposes to Bertha
-Xavier and Bertha are engaged
+Dan proposes to Abi
+Dan and Abi are engaged
 
-Yancey proposes to Amy
-Amy prefers Yancey over Victor
-Amy dumps Victor
-Yancey and Amy are engaged
+Ed proposes to Jan
+Ed and Jan are engaged
 
-Victor proposes to Diane
-Victor and Diane are engaged
+Fred proposes to Hope
+Fred and Hope are engaged
 
-Zeus proposes to Erika
-Zeus and Erika are engaged
+Gav proposes to Ivy
+Ivy prefers Abe over Gav
+Ivy rejects Gav
+
+Gav proposes to Eve
+Gav and Eve are engaged
+
+Hal proposes to Eve
+Eve prefers Gav over Hal
+Eve rejects Hal
+
+Hal proposes to Hope
+Hope prefers Hal over Fred
+Hope dumps Fred
+Hal and Hope are engaged
+
+Fred proposes to Dee
+Fred and Dee are engaged
+
+Ian proposes to Abi
+Abi prefers Dan over Ian
+Abi rejects Ian
+
+Ian proposes to Bea
+Ian and Bea are engaged
+
+Jon proposes to Cath
+Jon and Cath are engaged
 
 Pairings:
-Yancey : Amy
-Xavier : Bertha
-Wyatt : Clare
-Victor : Diane
-Zeus : Erika
+Dan : Abi
+Ian : Bea
+Jon : Cath
+Fred : Dee
+Gav : Eve
+Col : Fay
+Bob : Gay
+Hal : Hope
+Abe : Ivy
+Ed : Jan
 
-Elapsed wall clock time: 0.111843
-Elapsed CPU time:        0.00439
+Elapsed wall clock time: 0.124752
+Elapsed CPU time:        0.00615
 Another trial? (y)es, (n)o?
 n
