@@ -113,7 +113,7 @@ def setup(f):
         f ([file]): [needed to print output to the file]
     """ 
 
-    """Shuffle all the preferances"""
+    #Shuffle all the preferances
     for person in people:
         FYshuffle(rank[person])
         #print(rank[person])

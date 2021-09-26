@@ -50,6 +50,14 @@ women = people[len(people)//2:]
 
 
 def FYshuffle(list):
+    """[Implementation of the fisher yates shuffle algo]
+
+    Args:
+        list ([list]): [list of things to shuffle]
+
+    Returns:
+        [list]: [shuffled version of the original list]
+    """   
     for i in range(len(list)):
         a = random.randint(0, len(list) - 1)
         b = random.randint(0, len(list) - 1)
@@ -58,7 +66,12 @@ def FYshuffle(list):
 
 
 def setup(f):
-    """Shuffle all the preferances"""
+    """[Shuffles the preferances and writes the participants and their preferances to the file]
+
+    Args:
+        f ([file]): [needed to print output to the file]
+    """ 
+    #Shuffle all the preferances
     for person in people:
         FYshuffle(rank[person])
         #print(rank[person])
@@ -121,7 +134,14 @@ print(rank[man1][indexOfPick])
 
 
 def prefers(w, suiter, partner, f):
-    """
+    """[returns who woman w prefers, her suiter or her partner]
+
+    Args:
+        w ([str]): [womans name]
+        suiter ([str]): [suiters name]
+        partner ([str]): [partners name]
+        f ([file]): [output file to write to it]
+
     Returns:
         [bool]: [true when the woman prefers her suiter to her current partner 
         and false if she prefers her current partner]
@@ -149,8 +169,13 @@ prefers("Bertha", "Victor", husband[women.index("Bertha")])"""
 
 
 def gs(f):
+    """[Implements the gale shapley algorithm following the psudocode from the slides]
+
+    Args:
+        f ([file]): [needed for output file]
+    """  
     """
-  Initialize each person to be free.
+    Initialize each person to be free.
     while (some man is free and hasn't proposed to every woman) {
         
         Choose such a man m
