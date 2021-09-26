@@ -1,5 +1,8 @@
 import os
 
-with open("data.txt", "a") as f:
-    for i in range(1000, 10000, 1000):
-        print(os.system("python3 gs1.py -p" + str(i)), file=f)
+with open("data.txt", "w") as f:
+
+    for i in range(1000, 6500, 500):
+        os.system("python3 gs1.py -p" + str(i) + '| tee -a ' + "data.txt")
+
+    f.close()
