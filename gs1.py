@@ -169,7 +169,7 @@ def prefers(w, suiter, partner):
     return False
 
 
-def gs(self, f):
+def gs(f):
     """[Implements the gale shapley algorithm following the psudocode from the slides]
 
     Args:
@@ -217,6 +217,7 @@ def gs(self, f):
         else:
             print(w, "rejects", m, file=f)
             print(w, "rejects", m)
+
 #gs overload
 def gs():
     """[Implements the gale shapley algorithm following the psudocode from the slides]"""
@@ -276,7 +277,6 @@ def main(argv):
     
     assignGlobals()
 
-    print(debug)
 
     if debug == False:
         for person in people:
