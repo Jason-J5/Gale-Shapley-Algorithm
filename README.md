@@ -7,7 +7,9 @@
 
 
 ## General info
-This project is my implementation of the Gale–Shapley algorithm
+This project is my implementation of the Gale–Shapley algorithm.
+
+An important note about the timing of gs() in gsDemo.py, gs.py, and gs1.py: In cases where the program is writting to a file it will have a significant impact on the time. To obtain a more accurate timing of the gs() function please use gs1.py without the debug flag.
 
 # Requirements
 * Python 3.9.x
