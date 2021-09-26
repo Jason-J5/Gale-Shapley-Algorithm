@@ -272,7 +272,7 @@ def main(argv):
             print(file=f)
             print()
 
-            time.sleep(.1)
+            time.sleep(.3)
             #t1_start = timer() 
             t1_start = time.time()          
             #call to gale shapely

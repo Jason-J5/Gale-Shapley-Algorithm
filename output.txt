@@ -1,90 +1,46 @@
 Participants:
-['Abe', 'Bob', 'Col', 'Dan', 'Ed', 'Fred', 'Gav', 'Hal', 'Ian', 'Jon']
-['Abi', 'Bea', 'Cath', 'Dee', 'Eve', 'Fay', 'Gay', 'Hope', 'Ivy', 'Jan']
+[0, 1, 2, 3]
+[4, 5, 6, 7]
 
 Preferences:
-Abe : ['Ivy', 'Eve', 'Gay', 'Hope', 'Fay', 'Dee', 'Cath', 'Abi', 'Bea', 'Jan']
-Bob : ['Gay', 'Jan', 'Cath', 'Eve', 'Bea', 'Fay', 'Hope', 'Dee', 'Ivy', 'Abi']
-Col : ['Fay', 'Eve', 'Jan', 'Hope', 'Abi', 'Ivy', 'Dee', 'Bea', 'Cath', 'Gay']
-Dan : ['Abi', 'Hope', 'Cath', 'Gay', 'Jan', 'Ivy', 'Fay', 'Bea', 'Dee', 'Eve']
-Ed : ['Jan', 'Bea', 'Ivy', 'Dee', 'Hope', 'Abi', 'Eve', 'Cath', 'Fay', 'Gay']
-Fred : ['Hope', 'Dee', 'Jan', 'Fay', 'Eve', 'Abi', 'Cath', 'Gay', 'Bea', 'Ivy']
-Gav : ['Ivy', 'Eve', 'Jan', 'Fay', 'Bea', 'Dee', 'Cath', 'Hope', 'Gay', 'Abi']
-Hal : ['Eve', 'Hope', 'Cath', 'Fay', 'Dee', 'Ivy', 'Gay', 'Jan', 'Abi', 'Bea']
-Ian : ['Abi', 'Bea', 'Dee', 'Cath', 'Ivy', 'Gay', 'Hope', 'Jan', 'Fay', 'Eve']
-Jon : ['Cath', 'Jan', 'Gay', 'Ivy', 'Dee', 'Fay', 'Abi', 'Eve', 'Hope', 'Bea']
-Abi : ['Bob', 'Fred', 'Hal', 'Gav', 'Jon', 'Abe', 'Dan', 'Ian', 'Ed', 'Col']
-Bea : ['Jon', 'Fred', 'Dan', 'Ian', 'Gav', 'Abe', 'Col', 'Hal', 'Ed', 'Bob']
-Cath : ['Fred', 'Abe', 'Bob', 'Hal', 'Ian', 'Col', 'Gav', 'Jon', 'Dan', 'Ed']
-Dee : ['Fred', 'Jon', 'Hal', 'Bob', 'Ian', 'Gav', 'Ed', 'Dan', 'Abe', 'Col']
-Eve : ['Ed', 'Bob', 'Fred', 'Gav', 'Abe', 'Ian', 'Jon', 'Dan', 'Hal', 'Col']
-Fay : ['Col', 'Ed', 'Fred', 'Dan', 'Bob', 'Jon', 'Gav', 'Ian', 'Hal', 'Abe']
-Gay : ['Jon', 'Abe', 'Hal', 'Col', 'Ed', 'Bob', 'Dan', 'Gav', 'Fred', 'Ian']
-Hope : ['Gav', 'Jon', 'Bob', 'Abe', 'Dan', 'Hal', 'Col', 'Fred', 'Ian', 'Ed']
-Ivy : ['Ed', 'Abe', 'Hal', 'Dan', 'Fred', 'Ian', 'Jon', 'Col', 'Gav', 'Bob']
-Jan : ['Ed', 'Hal', 'Abe', 'Dan', 'Col', 'Fred', 'Ian', 'Bob', 'Gav', 'Jon']
+0 : [7, 6, 5, 4]
+1 : [5, 7, 4, 6]
+2 : [5, 4, 6, 7]
+3 : [7, 4, 6, 5]
+4 : [1, 0, 3, 2]
+5 : [3, 1, 2, 0]
+6 : [1, 0, 2, 3]
+7 : [3, 1, 2, 0]
 
 
-Abe proposes to Ivy
-Abe and Ivy are engaged
+0 proposes to 7
+0 and 7 are engaged
 
-Bob proposes to Gay
-Bob and Gay are engaged
+1 proposes to 5
+1 and 5 are engaged
 
-Col proposes to Fay
-Col and Fay are engaged
+2 proposes to 5
+5 prefers 1 over 2
+5 rejects 2
 
-Dan proposes to Abi
-Dan and Abi are engaged
+2 proposes to 4
+2 and 4 are engaged
 
-Ed proposes to Jan
-Ed and Jan are engaged
+3 proposes to 7
+7 prefers 3 over 0
+7 dumps 0
+3 and 7 are engaged
 
-Fred proposes to Hope
-Fred and Hope are engaged
-
-Gav proposes to Ivy
-Ivy prefers Abe over Gav
-Ivy rejects Gav
-
-Gav proposes to Eve
-Gav and Eve are engaged
-
-Hal proposes to Eve
-Eve prefers Gav over Hal
-Eve rejects Hal
-
-Hal proposes to Hope
-Hope prefers Hal over Fred
-Hope dumps Fred
-Hal and Hope are engaged
-
-Fred proposes to Dee
-Fred and Dee are engaged
-
-Ian proposes to Abi
-Abi prefers Dan over Ian
-Abi rejects Ian
-
-Ian proposes to Bea
-Ian and Bea are engaged
-
-Jon proposes to Cath
-Jon and Cath are engaged
+0 proposes to 6
+0 and 6 are engaged
 
 Pairings:
-Dan : Abi
-Ian : Bea
-Jon : Cath
-Fred : Dee
-Gav : Eve
-Col : Fay
-Bob : Gay
-Hal : Hope
-Abe : Ivy
-Ed : Jan
+2 : 4
+1 : 5
+0 : 6
+3 : 7
 
-Elapsed wall clock time: 0.124752
-Elapsed CPU time:        0.00615
+Elapsed wall clock time: 0.109472
+Elapsed CPU time:        0.00363
 Another trial? (y)es, (n)o?
 n
