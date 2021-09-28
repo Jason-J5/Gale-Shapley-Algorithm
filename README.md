@@ -4,6 +4,7 @@
 * [General info](#general-info)
 * [Requirements](#Reqirements)
 * [Usage](#Usage)
+* [Run-Time](#Run-Time)
 
 
 ## General info
@@ -62,3 +63,6 @@ A python script that calls [gs1.py](https://github.com/PurpleVS/CSC-321-/blob/ma
 ```
 python3 run-gs1.py
 ```
+
+# Run-Time
+![run time graph](https://imgur.com/a/376AIFP)
