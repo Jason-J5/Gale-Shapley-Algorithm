@@ -13,7 +13,7 @@ An important note about the timing of gs() in gsDemo.py, gs.py, and gs1.py: In c
 
 # Requirements
 * Python 3.9.x
-* gnuplot 
+* gnuplot 5.0.x
 
 
 
