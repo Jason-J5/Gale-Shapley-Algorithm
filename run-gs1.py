@@ -6,3 +6,5 @@ with open("data.txt", "w") as f:
         os.system("python3 gs1.py -p" + str(i) + '| tee -a ' + "data.txt")
 
     f.close()
+
+os.system("/usr/bin/gnuplot -persist model.gpt")
