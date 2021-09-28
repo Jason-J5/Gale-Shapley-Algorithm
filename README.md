@@ -65,4 +65,4 @@ python3 run-gs1.py
 ```
 
 # Run-Time
-![run time graph](https://imgur.com/a/376AIFP)
+![run time graph](https://imgur.com/x1n8AOE)
