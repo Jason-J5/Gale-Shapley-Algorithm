@@ -7,4 +7,4 @@ with open("data.txt", "w") as f:
 
     f.close()
 
-os.system("/usr/bin/gnuplot gnuplot.plt")
+os.system("/usr/bin/gnuplot -persist model.plt")
