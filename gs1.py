@@ -76,18 +76,20 @@ def assignGlobals():
 
 def FYshuffle(list):
     """[Implementation of the fisher yates shuffle algo]
+    algorithm from: https://python.algorithms-library.com/other/fischer_yates_shuffle
 
     Args:
         list ([list]): [list of things to shuffle]
 
     Returns:
         [list]: [shuffled version of the original list]
-    """    
+    """
     for i in range(len(list)):
         a = random.randint(0, len(list) - 1)
         b = random.randint(0, len(list) - 1)
         list[a], list[b] = list[b], list[a]
     return list
+    
 
 
 def setup(f):
