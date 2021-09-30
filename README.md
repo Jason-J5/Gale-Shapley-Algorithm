@@ -2,15 +2,21 @@
 
 ## Table of contents
 * [General info](#general-info)
+* [Run-Time](#Run-Time)
 * [Requirements](#Requirements)
 * [Usage and Functionality](#Usage-and-Functionality)
-* [Run-Time](#Run-Time)
+
 
 
 ## General info
 This project is my implementation of the Gale–Shapley algorithm.
 
 An important note about the timing of gs() in gsDemo.py, gs.py, and gs1.py: In cases where the program is writting to a file it will have a significant impact on the time. To obtain a more accurate timing of the gs() function please use gs1.py without the debug flag.
+
+# Run-Time
+A sample output from [run-gs1.py](https://github.com/PurpleVS/CSC-321-/blob/main/run-gs1.py):
+
+![run time graph](https://i.imgur.com/Q48OQZB.png)
 
 # Requirements
 * Python 3.9.x
