@@ -1,3 +1,11 @@
+# Program Name: gs1.py
+# Created by: Jason Jacobs
+# Date: 9/23/2021
+# PURPOSE: See README.md
+# INPUT(S): -p <x> for a arbitray number of people to simulate and -d to enable debug mode
+# OUTPUT(S): returns the number of people and the time taken to sort them, if debug mode is on debug.txt
+# EXAMPLES: 1000 0.03445
+
 import sys, getopt
 import copy
 import time

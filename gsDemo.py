@@ -1,3 +1,10 @@
+# Program Name: gsDemo.py
+# Created by: Jason Jacobs
+# Date: 9/23/2021
+# PURPOSE: It is a demo implementation of the Gale-Shapley algorithm
+# INPUT(S): N/A
+# OUTPUT(S): Actions taken by the algorithm on a given list, and the stable matches produced 
+# EXAMPLES: See output.txt
 import copy
 import time
 import random

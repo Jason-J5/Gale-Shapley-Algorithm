@@ -1,3 +1,11 @@
+# Program Name: gs.py
+# Created by: Jason Jacobs
+# Date: 9/23/2021
+# PURPOSE: See README.md
+# INPUT(S): Takes 1, 2, or 3 arguments -o for a output path, -i for the input path, and -p <x> for a arbitray number of people to simulate 
+# OUTPUT(S): a file output.txt
+# EXAMPLES: See output.txt
+
 import sys, getopt
 import copy
 import time
