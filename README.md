@@ -2,8 +2,8 @@
 
 ## Table of contents
 * [General info](#general-info)
-* [Requirements](#Reqirements)
-* [Usage](#Usage)
+* [Requirements](#Requirements)
+* [Usage and Functionality](#Usage-and-Functionality)
 * [Run-Time](#Run-Time)
 
 
@@ -18,7 +18,7 @@ An important note about the timing of gs() in gsDemo.py, gs.py, and gs1.py: In c
 
 
 
-# Usage 
+# Usage and Functionality
 The input file file must have a even number of lines
 The first half must have all the males names and their preferances
 The second half must have all the females names and their preferances
@@ -65,5 +65,8 @@ python3 run-gs1.py
 ```
 
 # Run-Time
-A sample output from run-gs1.py:
+A sample output from gnuplot.plt:
+```
+gnuplot gnuplot.plt <Can only be run with data.txt>
+```
 ![run time graph](https://i.imgur.com/x1n8AOE.png)
