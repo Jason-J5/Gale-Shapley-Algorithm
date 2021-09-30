@@ -1,3 +1,5 @@
+#Program name:  model.plt
+#Purpose:       Plot the data from data.txt
 y(x)=a0 + a1*x + a2 * x**2
 
 a0=1
