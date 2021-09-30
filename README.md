@@ -65,8 +65,6 @@ python3 run-gs1.py
 ```
 
 # Run-Time
-A sample output from gnuplot.plt:
-```
-gnuplot gnuplot.plt <Can only be run with data.txt>
-```
-![run time graph](https://i.imgur.com/x1n8AOE.png)
+A sample output from run-gs1.py:
+
+![run time graph](https://i.imgur.com/Q48OQZB.png)
