@@ -66,4 +66,5 @@ python3 run-gs1.py
 
 # Run-Time
 A sample output from run-gs1.py:
+
 ![run time graph](https://i.imgur.com/Q48OQZB.png)
