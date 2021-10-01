@@ -77,10 +77,3 @@ Calls gnuplot on data.txt and attempts to fit data.txt to the equation
 y(x)=a0 + a1*x + a2 * x**2
 ```
 and then plots the line of best fit on the graph 
-
-# Run-Time
-A sample output from [run-gs1.py](https://github.com/PurpleVS/CSC-321-/blob/main/run-gs1.py):
-
-![run time graph](https://i.imgur.com/Q48OQZB.png)
-
-
