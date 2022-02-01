@@ -1,4 +1,4 @@
-# CSC-321-Lab0
+# Gale–Shapley Algorithm
 
 ## Table of contents
 * [General info](#general-info)
